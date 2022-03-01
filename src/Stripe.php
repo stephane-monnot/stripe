@@ -149,6 +149,29 @@ class Stripe
     }
 
     /**
+     * Returns the Stripe base url.
+     *
+     * @return string
+     */
+    public function getBaseUrl()
+    {
+        return $this->config->getBaseUrl();
+    }
+
+    /**
+     * Sets the Stripe base url.
+     *
+     * @param  string  $baseUrl
+     * @return $this
+     */
+    public function setBaseUrl($baseUrl)
+    {
+        $this->config->setBaseUrl($baseUrl);
+
+        return $this;
+    }
+
+    /**
      * Sets the idempotency key.
      *
      * @param  string|null  $idempotencyKey

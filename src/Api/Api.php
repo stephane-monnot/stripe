@@ -72,7 +72,7 @@ abstract class Api implements ApiInterface
      */
     public function baseUrl()
     {
-        return 'https://api.stripe.com';
+        return $this->config->getBaseUrl();
     }
 
     /**

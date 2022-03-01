@@ -90,6 +90,14 @@ class StripeTest extends TestCase
     }
 
     /** @test */
+    public function it_can_get_and_set_the_base_url()
+    {
+        $this->stripe->setBaseUrl('http://strip-mock');
+
+        $this->assertEquals('http://strip-mock', $this->stripe->getBaseUrl());
+    }
+
+    /** @test */
     public function it_can_get_the_current_package_version()
     {
         $version = $this->stripe->getVersion();

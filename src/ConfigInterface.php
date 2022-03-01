@@ -68,6 +68,21 @@ interface ConfigInterface
     public function setApiVersion($apiVersion);
 
     /**
+     * Returns the Stripe base url.
+     *
+     * @return string
+     */
+    public function getBaseUrl();
+
+    /**
+     * Sets the Stripe base url.
+     *
+     * @param  string  $baseUrl
+     * @return $this
+     */
+    public function setBaseUrl($baseUrl);
+
+    /**
      * Returns the idempotency key.
      *
      * @return string|null

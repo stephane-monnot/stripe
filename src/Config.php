@@ -44,6 +44,13 @@ class Config implements ConfigInterface
     protected $apiVersion;
 
     /**
+     * The Stripe base url.
+     *
+     * @var string
+     */
+    protected $baseUrl = 'https://api.stripe.com';
+
+    /**
      * The idempotency key.
      *
      * @var string|null
@@ -150,6 +157,24 @@ class Config implements ConfigInterface
     public function setApiVersion($apiVersion)
     {
         $this->apiVersion = $apiVersion;
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getBaseUrl()
+    {
+        return $this->baseUrl;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setBaseUrl($baseUrl)
+    {
+        $this->baseUrl = $baseUrl;
 
         return $this;
     }
